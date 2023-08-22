@@ -4,7 +4,7 @@
 	<test name="Make My Trip">
 		<classes>
 			<class name="com.makemytrip.flightbooking.scripts.FlightBooking" />
-<!--             <class name="com.makemytrip.flightbooking.scripts.FlightBooking_TwoWay" /> -->
+            <class name="com.makemytrip.flightbooking.scripts.FlightBooking_TwoWay" />
 		</classes>
 	</test>
 </suite>	
