@@ -41,21 +41,24 @@ public class HomePage {
 	public void selectFrom(String fromCity) {
 		selUtils.click(lblFromCity,"From City Label");
 		selUtils.enterText(textFieldFrom, fromCity, "From City Text Field");
-		driver.findElement(By.xpath(dpCreator.getXpathForSuggestionsDropdown(fromCity))).click();
+		selUtils.jsClick(By.xpath(dpCreator.getXpathForSuggestionsDropdown(fromCity)), "Selected from city");
+		//driver.findElement(By.xpath(dpCreator.getXpathForSuggestionsDropdown(fromCity))).click();
 	}
 
 	public void selectTo(String toCity) throws InterruptedException {
 		driver.findElement(lblToCity).click();
 		driver.findElement(textFieldTo).sendKeys(toCity);
 		//Thread.sleep(1000);
-		driver.findElement(By.xpath(dpCreator.getXpathForSuggestionsDropdown(toCity))).click();
+		selUtils.jsClick(By.xpath(dpCreator.getXpathForSuggestionsDropdown(toCity)), "Selected to city");
+		//driver.findElement(By.xpath(dpCreator.getXpathForSuggestionsDropdown(toCity))).click();
 	}
 
 	public void selectDepartureDate(String monthYear, String date) {
 		//WebElement element = driver.findElement(DepartureDate);
 		//driver.findElement(datePickerWrapper).click();
 		//driver.findElement(DepDateclick).click();
-		driver.findElement(By.xpath(dpCreator.getXpathForDateOnDatePicker(monthYear, date))).click();
+		selUtils.jsClick(By.xpath(dpCreator.getXpathForDateOnDatePicker(monthYear, date)), "Selected Departure date");
+		//driver.findElement(By.xpath(dpCreator.getXpathForDateOnDatePicker(monthYear, date))).click();
 		
 		//JavascriptExecutor executor = (JavascriptExecutor) driver;
 		//executor.executeScript("arguments[0].click();", element);
@@ -65,7 +68,8 @@ public class HomePage {
 	public void SelectReturnDate(String returnmonthYear, String returndate) throws InterruptedException {
 		driver.findElement(ReturnDateclick).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(dpCreator.getXpathForReturnDateOnDatePicker(returnmonthYear, returndate))).click();
+		selUtils.jsClick(By.xpath(dpCreator.getXpathForReturnDateOnDatePicker(returnmonthYear, returndate)), "Selected Return date");
+		//driver.findElement(By.xpath(dpCreator.getXpathForReturnDateOnDatePicker(returnmonthYear, returndate))).click();
 		
 		/*WebElement element = driver.findElement(ReturnDate);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;

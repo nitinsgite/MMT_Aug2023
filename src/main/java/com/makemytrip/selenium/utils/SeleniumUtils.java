@@ -26,7 +26,7 @@ public class SeleniumUtils {
 		BaseClass.extentTest.log(Status.PASS, "Clicked successfully on "+locName);
 	}
 	
-	public void jsClick(By locator,String locName) {
+	public void jsClick(By locator, String locName) {
 		WebElement element = driver.findElement(locator);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", element);

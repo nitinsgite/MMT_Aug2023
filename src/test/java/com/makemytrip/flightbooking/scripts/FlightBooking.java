@@ -20,6 +20,5 @@ public class FlightBooking extends BaseClass {
 		extentTest.log(Status.PASS, "Flight Searched Successfully");
 		homePage.cheapestFlightRates();
 		extentTest.log(Status.PASS, "Found Cheapest Rates");
-		extentReport.flush();
 	}
 }
